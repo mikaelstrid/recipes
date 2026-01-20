@@ -14,32 +14,7 @@ function App() {
         <div className="recipes-grid">
           {recipes.map((recipe) => (
             <article key={recipe.id} className="recipe-card">
-              <div className="recipe-header">
-                <h2>{recipe.title}</h2>
-              </div>
-              <p className="recipe-description">{recipe.description}</p>
-              
-              <div className="recipe-section">
-                <h3>Ingredienser</h3>
-                <ul className="ingredients-list">
-                  {recipe.ingredients.map((ingredient, index) => (
-                    <li key={`${recipe.id}-ingredient-${index}`}>
-                      <span className="ingredient-quantity">{ingredient.quantity}</span>
-                      {' '}
-                      <span className="ingredient-name">{ingredient.name}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              
-              <div className="recipe-section">
-                <h3>Instruktioner</h3>
-                <ol className="instructions-list">
-                  {recipe.instructions.map((instruction, index) => (
-                    <li key={`${recipe.id}-instruction-${index}`}>{instruction}</li>
-                  ))}
-                </ol>
-              </div>
+              <h2>{recipe.title}</h2>
             </article>
           ))}
         </div>
