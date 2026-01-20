@@ -1,29 +1,26 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./components/HomePage";
+import RecipePage from "./components/RecipePage";
 import "./App.css";
-import RecipesService from "./services/recipes.service";
 
 function App() {
-  const recipes = RecipesService.getAllRecipes();
-
   return (
-    <div className="app-container">
-      <header className="header">
-        <h1>Våra recept</h1>
-      </header>
+    <BrowserRouter basename="/recipes">
+      <div className="app-container">
+        <header className="header">
+          <h1>Våra recept</h1>
+        </header>
 
-      <main className="main-content">
-        <div className="recipes-grid">
-          {recipes.map((recipe) => (
-            <article key={recipe.id} className="recipe-card">
-              <h2>{recipe.title}</h2>
-            </article>
-          ))}
-        </div>
-      </main>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/recept/:id" element={<RecipePage />} />
+        </Routes>
 
-      <footer className="footer">
-        <p>Copyright Mikael Strid</p>
-      </footer>
-    </div>
+        <footer className="footer">
+          <p>Copyright Mikael Strid</p>
+        </footer>
+      </div>
+    </BrowserRouter>
   );
 }
 
