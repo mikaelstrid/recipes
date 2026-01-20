@@ -1,0 +1,80 @@
+import type { IRecipe } from "../models/recipe.model";
+
+export const testRecipes: IRecipe[] = [
+  {
+    id: "1",
+    title: "Pannkakor",
+    description:
+      "Klassiska svenska pannkakor som är perfekta till frukost eller middag.",
+    ingredients: [
+      { name: "Ägg", quantity: "3 st" },
+      { name: "Mjölk", quantity: "6 dl" },
+      { name: "Vetemjöl", quantity: "3 dl" },
+      { name: "Salt", quantity: "1 krm" },
+      { name: "Smör", quantity: "till stekning" },
+    ],
+    instructions: [
+      "Vispa ihop ägg och hälften av mjölken.",
+      "Tillsätt mjöl och salt och vispa till en slät smet.",
+      "Späd med resten av mjölken.",
+      "Låt smeten vila i ca 30 minuter.",
+      "Stek tunna pannkakor i smör i en het stekpanna.",
+      "Servera med sylt och grädde.",
+    ],
+  },
+  {
+    id: "2",
+    title: "Pannbiffar med kokt potatis",
+    description:
+      "En klassisk svensk husmanskost som är enkel att laga och god.",
+    ingredients: [
+      { name: "Nötfärs", quantity: "500 g" },
+      { name: "Ägg", quantity: "1 st" },
+      { name: "Ströbröd", quantity: "1 dl" },
+      { name: "Mjölk", quantity: "1 dl" },
+      { name: "Lök", quantity: "1 st, finhackad" },
+      { name: "Salt", quantity: "1 tsk" },
+      { name: "Peppar", quantity: "0.5 tsk" },
+      { name: "Potatis", quantity: "800 g" },
+      { name: "Smör", quantity: "till stekning" },
+    ],
+    instructions: [
+      "Blanda färs, ägg, ströbröd, mjölk, hackad lök, salt och peppar.",
+      "Arbeta smeten kraftigt.",
+      "Forma till runda biffar.",
+      "Stek biffarna i smör på medelvärme tills de är genomstekta, ca 3-4 minuter per sida.",
+      "Skala och koka potatisen i saltat vatten tills den är mjuk, ca 15-20 minuter.",
+      "Servera pannbiffarna med kokt potatis och gärna lingonsylt.",
+    ],
+  },
+  {
+    id: "3",
+    title: "Pad Thai",
+    description: "Thailändsk klassiker med risnudlar, räkor och jordnötter.",
+    ingredients: [
+      { name: "Risnudlar", quantity: "250 g" },
+      { name: "Räkor", quantity: "300 g, skalade" },
+      { name: "Ägg", quantity: "2 st" },
+      { name: "Böngroddar", quantity: "150 g" },
+      { name: "Salladslök", quantity: "3 st, skivade" },
+      { name: "Vitlök", quantity: "2 klyftor, hackade" },
+      { name: "Sojasås", quantity: "3 msk" },
+      { name: "Fisksås", quantity: "2 msk" },
+      { name: "Limejuice", quantity: "2 msk" },
+      { name: "Brunt socker", quantity: "1 msk" },
+      { name: "Jordnötter", quantity: "50 g, hackade" },
+      { name: "Olja", quantity: "till stekning" },
+    ],
+    instructions: [
+      "Blötlägg risnudlarna i varmt vatten enligt förpackningens anvisningar.",
+      "Blanda sojasås, fisksås, limejuice och socker till en sås.",
+      "Hetta upp olja i en wok eller stor stekpanna.",
+      "Stek räkorna snabbt, lägg åt sidan.",
+      "Stek vitlök och salladslök i woken.",
+      "Knäck ner äggen och rör om tills de börjar stelna.",
+      "Tillsätt avrunna nudlar och såsen, stek i ca 2 minuter.",
+      "Lägg tillbaka räkorna och tillsätt böngroddar.",
+      "Servera med hackade jordnötter och limeklyftor.",
+    ],
+  },
+];
