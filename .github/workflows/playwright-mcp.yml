@@ -1,0 +1,28 @@
+# Example: Deploy Playwright MCP Server (you'd need to adapt this)
+# Note: GitHub doesn't yet officially support external MCP servers for Copilot
+# This is a placeholder for when that feature becomes available
+
+name: Playwright MCP Server
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      # You would deploy to a hosting service here
+      # Examples: Railway, Render, Fly.io, Cloud Run
+      - name: Deploy MCP Server
+        run: |
+          echo "Deploy Playwright MCP server with HTTP/SSE transport"
+          # npx @microsoft/mcp-server-playwright --transport http --port 3000
