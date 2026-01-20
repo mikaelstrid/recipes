@@ -23,7 +23,7 @@ function App() {
                 <h3>Ingredienser</h3>
                 <ul className="ingredients-list">
                   {recipe.ingredients.map((ingredient, index) => (
-                    <li key={index}>
+                    <li key={`${recipe.id}-ingredient-${index}`}>
                       <span className="ingredient-quantity">{ingredient.quantity}</span>
                       {' '}
                       <span className="ingredient-name">{ingredient.name}</span>
@@ -36,7 +36,7 @@ function App() {
                 <h3>Instruktioner</h3>
                 <ol className="instructions-list">
                   {recipe.instructions.map((instruction, index) => (
-                    <li key={index}>{instruction}</li>
+                    <li key={`${recipe.id}-instruction-${index}`}>{instruction}</li>
                   ))}
                 </ol>
               </div>
